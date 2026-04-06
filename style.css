@@ -500,16 +500,17 @@ body {
     font-size: 14px;
     width: 100%;
     border: 1px solid transparent;
-    border-radius: 9999px; /* pill */
+    border-radius: 9px;
     outline: none;
 }
 
 #newsletter button {
+    height: 3.125rem;
+    padding: 0 1.25em;
     background-color: #CF2A28;
     color: #fff;
     white-space:nowrap;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    border-radius: 9;
 }
 
 #newsletter.section-m1 {
@@ -948,7 +949,7 @@ footer .copyright {
 #blog .blog-details a {
     text-decoration: none;
     font-size: 11px;
-    color: #000;
+    color: #293356;
     font-weight: 700;
     position: relative;
     transition: 0.3s;
@@ -958,9 +959,9 @@ footer .copyright {
     content: "";
     width: 50px;
     height: 1px;
-    background-color: #000;
+    background-color: #293356;
     position: absolute;
-    top: 2px;
+    top: 4px;
     right: -60px;
 }
 
@@ -982,3 +983,6 @@ footer .copyright {
     z-index: -9;
 }
 
+#blog .blog-details h4, p {
+    color:#293356
+}

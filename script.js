@@ -501,7 +501,7 @@ function getBlogData(id) {
             `
         },
         '5': {
-            title: 'SKULLPANDA L\'impressionnisme Series Plush Doll',
+            title: 'SKULLPANDA L’impressionnisme Series Plush Doll',
             date: '02/03/2024',
             category: 'SKULLPANDA Series',
             image: 'SKULLPANDA L’impressionnisme Series Plush Doll.png',

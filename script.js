@@ -101,12 +101,11 @@ function renderCart() {
         total += item.price * item.quantity;
     });
 
+    const discount = parseFloat(localStorage.getItem('checkoutDiscount')) || 0;
+    const shipping = 30000;
+    const finalTotal = total + shipping - discount;
     const subtotalTableBody = document.querySelector('#subtotal table tbody');
     if (subtotalTableBody) {
-        const discount = parseFloat(localStorage.getItem('checkoutDiscount')) || 0;
-        const shipping = 30000;
-        const finalTotal = total + shipping - discount;
-
         // Update subtotal
         const subtotalRow = subtotalTableBody.querySelector('tr:first-child td:last-child');
         if (subtotalRow) {

@@ -479,7 +479,7 @@ function getBlogData(id) {
             title: 'SKULLPANDA L\'impressionnisme Series Plush Doll',
             date: '02/03/2024',
             category: 'SKULLPANDA Series',
-            image: 'img/blog/SKULLPANDA L\'impressionnisme Series Plush Doll.png',
+            image: 'img/blog/SKULLPANDA L’impressionnisme Series Plush Doll',
             content: `
                 <p><strong>Nghệ thuật Ấn tượng qua góc nhìn SKULLPANDA</strong></p>
                 <p>SKULLPANDA L'impressionnisme Series Plush Doll là sự kết hợp độc đáo giữa phong cách nghệ thuật Ấn tượng Pháp và thiết kế SKULLPANDA. Series này mang đến cái nhìn mới mẻ về nghệ thuật cổ điển.</p>

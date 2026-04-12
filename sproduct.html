@@ -16,7 +16,7 @@
 <body>
     <!-- Header -->
     <section id="header">
-        <a href="#"><img src="img/logomoi.png" class="logo"> </a>
+        <a href="index.html"><img src="img/logomoi.png" class="logo"> </a>
 
         <div>
             <ul id="navbar">
@@ -38,39 +38,33 @@
     <!-- Product details -->
     <section id="prodetails" class="section-p1">
         <div class="single-pro-image">
-            <img src="img/products/3.1.png" width="100%" id="MainImg">
+            <img width="100%" id="MainImg">
+            <img width="100%" id="NextImg" style="position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.3s ease-in-out;">
 
             <div class="small-img-group">
                 <div class="small-img-col">
-                    <img src="img/products/3.1.png" width="100%" class="small-img">
+                    <img width="100%" class="small-img">
                 </div>
                 <div class="small-img-col">
-                    <img src="img/products/3.2.jpg" width="100%" class="small-img">
+                    <img width="100%" class="small-img">
                 </div>
                 <div class="small-img-col">
-                    <img src="img/products/3.3.jpg" width="100%" class="small-img">
+                    <img width="100%" class="small-img">
                 </div>
                 <div class="small-img-col">
-                    <img src="img/products/3.4.jpg" width="100%" class="small-img">
+                    <img width="100%" class="small-img">
                 </div>
             </div>
         </div>
         <div class="single-pro-details">
-            <h6>Home / T-Shirt</h6>
-            <h4>Thời Trang Nam Áo Thun</h4>
-            <h2>$100</h2>
-            <select>
-                <option>Chọn Kích Cỡ</option>
-                <option>XL</option>
-                <option>XLL</option>
-                <option>L</option>
-                <option>M</option>
-            </select>
+            <h6 id="breadcrumb">Home / T-Shirt</h6>
+            <h4 id="product-title">Thời Trang Nam Áo Thun</h4>
+            <h2 id="product-price">$100</h2>
 
-            <input type="number" value="1">
-            <button class="normal">Thêm vào giỏ hàng</button>
+            <input type="number" value="1" id="product-quantity">
+            <button class="normal" id="add-to-cart-detail">Thêm vào giỏ hàng</button>
             <h4>Thông tin chi tiết sản phẩm</h4>
-            <span>T-Shirt chất liệu coton toáng mát</span>
+            <span id="product-description">T-Shirt chất liệu coton toáng mát</span>
         </div>
     </section>
 
@@ -78,7 +72,11 @@
     <section id="product1" class="section-p1">
     <h2>Hàng mới về</h2>
     <div class="pro-container">
-        <div class="pro" >
+        <div class="pro" data-id="5" data-name="Shelter" data-price="280000" data-img="img/products/3.5.png" data-description="Shelter
+Shelter xoay quanh nhu cầu tìm kiếm một nơi an toàn về mặt tinh thần.
+Series thể hiện Hirono trong những không gian nhỏ, kín hoặc được bao bọc, tượng trưng cho sự bảo vệ và mong muốn được che chở. Chủ đề này phản ánh rất rõ khía cạnh nội tâm của nhân vật – sự mong manh và nhu cầu thuộc về một nơi nào đó. 
+Thiết kế sử dụng hình khối đơn giản nhưng giàu tính biểu tượng, tạo cảm giác ấm áp nhưng không kém phần cô đơn.
+">
             <img src="img/products/3.5.png" alt="">
             <div class="des">
                 <span>Hirono Series</span>
@@ -95,7 +93,11 @@
                 <a href="#"><i class="fa-solid fa-cart-plus cart"></i></a>
         </div>
 
-        <div class="pro" >
+        <div class="pro" data-id="6" data-name="Reshape" data-price="280000" data-img="img/products/3.6.png" data-description="Reshape
+Reshape là hành trình tái định hình bản thân – nơi mỗi thay đổi đều đi kèm với mất mát và trưởng thành.
+Thiết kế thể hiện rõ điều này thông qua các chi tiết như cơ thể bị khâu lại, biến dạng hoặc tái cấu trúc. Mỗi figure đại diện cho một trạng thái trong quá trình phát triển, từ tổn thương đến hồi phục.
+Series sử dụng hình ảnh như một phép ẩn dụ cho việc con người liên tục thay đổi để thích nghi và hoàn thiện chính mình.
+">
             <img src="img/products/3.6.png" alt="">
             <div class="des">
                 <span>Hirono Series</span>
@@ -112,7 +114,10 @@
                 <a href="#"><i class="fa-solid fa-cart-plus cart"></i></a>
         </div>
 
-        <div class="pro" >
+        <div class="pro" data-id="7" data-name="MIME" data-price="280000" data-img="img/products/3.7.jpg" data-description="Mime
+Lấy cảm hứng từ nghệ thuật kịch câm, Mime tập trung vào việc truyền tải cảm xúc mà không cần biểu đạt trực tiếp.
+Nhân vật trong series thường có biểu cảm tối giản, nhưng lại được đặt trong những tình huống giàu ẩn ý, buộc người xem phải tự diễn giải câu chuyện. Đây là một dòng mang tính nghệ thuật cao, nhấn mạnh vào sự im lặng và những cảm xúc khó gọi tên.
+">
             <img src="img/products/3.7.jpg" alt="">
             <div class="des">
                 <span>Hirono Series</span>
@@ -129,7 +134,10 @@
                 <a href="#"><i class="fa-solid fa-cart-plus cart"></i></a>
         </div>
 
-        <div class="pro" >
+        <div class="pro" data-id="8" data-name="The Other One" data-price="280000" data-img="img/products/3.8.png" data-description="The Other One
+The Other One khai thác khái niệm “bản ngã thứ hai” – phần con người mà chúng ta không thường thể hiện ra bên ngoài.
+Thiết kế thể hiện sự đối lập thông qua hình dáng, biểu cảm hoặc cấu trúc nhân vật, tạo nên cảm giác phân tách giữa hai trạng thái tồn tại. Series mang tính tâm lý rõ rệt, phản ánh sự phức tạp trong nhận thức và bản sắc cá nhân.
+">
             <img src="img/products/3.8.png" alt="">
             <div class="des">
                 <span>Hirono Series</span>
@@ -183,29 +191,29 @@
 
             <div class="col">
                 <h4>Liên Hệ</h4>
-                <a href="#">Về chúng tôi</a>
-                <a href="#">Thông tin giao hàng</a>
-                <a href="#">Chính sách bảo mật</a>
-                <a href="#">Điều khoản & Điều kiện</a>
-                <a href="#">Liên hệ chúng tôi</a>
+                <a href="about.html">Về chúng tôi</a>
+                <a href="contact.html">Thông tin giao hàng</a>
+                <a href="contact.html">Chính sách bảo mật</a>
+                <a href="contact.html">Điều khoản & Điều kiện</a>
+                <a href="contact.html">Liên hệ chúng tôi</a>
             </div>
             <div class="col">
                 <h4>Tài khoản của tôi</h4>
-                <a href="#">Đăng nhập</a>
-                <a href="#">Xem giỏ hàng</a>
-                <a href="#">Sản phẩm yêu thích</a>
-                <a href="#">Theo dõi đơn hàng</a>
-                <a href="#">Hỗ trợ</a>
+                <a href="index.html">Đăng nhập</a>
+                <a href="cart.html">Xem giỏ hàng</a>
+                <a href="shop.html">Sản phẩm yêu thích</a>
+                <a href="contact.html">Theo dõi đơn hàng</a>
+                <a href="contact.html">Hỗ trợ</a>
             </div>
             <div class="col install">
                 <h4>Tải Ứng Dụng</h4>
                 <p>Từ App Store hoặc Google Play</p>
                 <div class="row">
-                    <img src="img/pay/app.jpg" alt="">
-                    <img src="img/pay/play.jpg" alt="">
+                    <img src="img/pay/app.jpg" onclick="window.location.href='https://apps.apple.com/vn/app/pop-mart/id1594346256'">
+                    <img src="img/pay/play.jpg" onclick="window.location.href='https://play.google.com/store/apps/details?id=com.popmart.global&hl=vi&pli=1'">
                 </div>
                 <p>Cổng thanh toán an toàn</p>
-                <img src="img/pay/pay.png" alt="">
+                <img src="img/pay/pay.png" onclick="window.location.href='checkout.html'">
             </div>
 
 
@@ -214,23 +222,6 @@
                 <p>Tất cả hình ảnh đều thuộc quyền sở hữu của POP MART</p>
             </div>
         </footer>
-        <script>
-            var MainImg = document.getElementById("MainImg");
-            var smallimg = document.getElementsByClassName("small-img");
-
-            smallimg[0].onclick = function () {
-                MainImg.src = smallimg[0].src; 
-            }
-            smallimg[1].onclick = function () {
-                MainImg.src = smallimg[1].src; 
-            }
-            smallimg[2].onclick = function () {
-                MainImg.src = smallimg[2].src; 
-            }
-            smallimg[3].onclick = function () {
-                MainImg.src = smallimg[3].src; 
-            }
-        </script>
         <script src="script.js"></script>
 </body>
 

@@ -4,8 +4,10 @@ const close = document.getElementById('close');
 
 function addToCart(event, proDiv) {
     if (event) {
+        if (event._addToCartHandled) return;
         event.preventDefault();
         event.stopPropagation();
+        event._addToCartHandled = true;
     }
 
     const id = proDiv.dataset.id;
@@ -27,7 +29,7 @@ function addToCart(event, proDiv) {
 
 function animateAddToCart(proDiv) {
     const imgElement = proDiv.querySelector('img');
-    const cartIcon = document.getElementById('cart-icon');
+    const cartIcon = getVisibleCartIcon();
     if (!imgElement || !cartIcon) return;
 
     const imgRect = imgElement.getBoundingClientRect();
@@ -59,6 +61,14 @@ function animateAddToCart(proDiv) {
     }, 810);
 }
 
+function getVisibleCartIcon() {
+    const icons = Array.from(document.querySelectorAll('#cart-icon-mobile, #cart-icon'));
+    return icons.find(icon => {
+        const rect = icon.getBoundingClientRect();
+        return rect.width > 0 && rect.height > 0;
+    }) || icons[0];
+}
+
 function formatPrice(price) {
     return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 }
@@ -78,7 +88,13 @@ function renderCart() {
             <td><img src="${item.img}" alt="${item.name}"></td>
             <td>${item.name}</td>
             <td>${formatPrice(item.price)} VND</td>
-            <td><input type="number" min="1" value="${item.quantity}" class="cart-quantity" data-id="${item.id}"></td>
+            <td>
+                <div class="quantity-control">
+                    <button type="button" class="quantity-decrease" data-id="${item.id}">−</button>
+                    <input type="number" min="1" value="${item.quantity}" class="cart-quantity" data-id="${item.id}">
+                    <button type="button" class="quantity-increase" data-id="${item.id}">+</button>
+                </div>
+            </td>
             <td>${formatPrice(item.price * item.quantity)} VND</td>
         `;
         tbody.appendChild(row);
@@ -124,6 +140,15 @@ function renderCart() {
         if (totalRow) {
             totalRow.innerHTML = '<strong>' + formatPrice(finalTotal) + ' VND</strong>';
         }
+    }
+
+    const totalPriceEl = document.getElementById('total-price');
+    const grandTotalEl = document.getElementById('grand-total');
+    if (totalPriceEl) {
+        totalPriceEl.textContent = formatPrice(total) + ' VND';
+    }
+    if (grandTotalEl) {
+        grandTotalEl.textContent = formatPrice(finalTotal) + ' VND';
     }
 }
 
@@ -479,7 +504,7 @@ function getBlogData(id) {
             title: 'SKULLPANDA L\'impressionnisme Series Plush Doll',
             date: '02/03/2024',
             category: 'SKULLPANDA Series',
-            image: 'img/blog/SKULLPANDA L’impressionnisme Series Plush Doll',
+            image: 'SKULLPANDA L’impressionnisme Series Plush Doll.png',
             content: `
                 <p><strong>Nghệ thuật Ấn tượng qua góc nhìn SKULLPANDA</strong></p>
                 <p>SKULLPANDA L'impressionnisme Series Plush Doll là sự kết hợp độc đáo giữa phong cách nghệ thuật Ấn tượng Pháp và thiết kế SKULLPANDA. Series này mang đến cái nhìn mới mẻ về nghệ thuật cổ điển.</p>
@@ -981,6 +1006,30 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        const decreaseButton = event.target.closest('.quantity-decrease');
+        const increaseButton = event.target.closest('.quantity-increase');
+        if (decreaseButton || increaseButton) {
+            event.preventDefault();
+            const button = decreaseButton || increaseButton;
+            const id = button.dataset.id;
+            const quantityInput = document.querySelector(`.cart-quantity[data-id="${id}"]`);
+            if (!id || !quantityInput) return;
+
+            const currentValue = parseInt(quantityInput.value, 10) || 1;
+            const newValue = decreaseButton ? Math.max(1, currentValue - 1) : currentValue + 1;
+            quantityInput.value = newValue;
+            updateQuantity(id, newValue);
+            return;
+        }
+
+        const quantityInput = event.target.closest('.cart-quantity');
+        if (quantityInput) {
+            const id = quantityInput.dataset.id;
+            if (id) updateQuantity(id, quantityInput.value);
+        }
+    });
+
+    document.body.addEventListener('change', function (event) {
         const quantityInput = event.target.closest('.cart-quantity');
         if (quantityInput) {
             const id = quantityInput.dataset.id;

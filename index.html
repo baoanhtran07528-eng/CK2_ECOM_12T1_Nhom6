@@ -16,7 +16,7 @@
 <body>
     <!-- Header -->
     <section id="header">
-        <a href="#"><img src="img/logomoi.png" class="logo"> </a>
+        <a href="index.html"><img src="img/logomoi.png" class="logo"> </a>
 
         <div>
             <ul id="navbar">
@@ -69,7 +69,10 @@
     <section id="product1" class="section-p1">
     <h2>Sản Phẩm Nổi Bật</h2>
     <div class="pro-container">
-        <div class="pro" >
+        <div class="pro" data-id="1" data-name="Everyday Wonderland" data-price="280000" data-img="img/products/3.1.png" data-description="Everyday Wonderland
+Everyday Wonderland biến những khoảnh khắc đời thường thành một thế giới giàu trí tưởng tượng. Series khai thác sự đối lập giữa “bình thường” và “kỳ diệu”, khi những hoạt động quen thuộc được tái hiện theo cách mộng mơ và có phần siêu thực.
+Thiết kế mang màu sắc nhẹ nhàng, bố cục đơn giản nhưng giàu chi tiết, tạo cảm giác gần gũi nhưng không nhàm chán. Đây là một trong những dòng thể hiện rõ tinh thần cốt lõi của Skullpanda: tìm thấy những câu chuyện đặc biệt trong những điều quen thuộc.
+">
             <img src="img/products/3.1.png" alt="">
             <div class="des">
                 <span>Skullpanda Series</span>
@@ -83,10 +86,14 @@
                     </div>
                     <h4>280.000 VND</h4>
                 </div>
-                <a href="#"><i class="fa-solid fa-cart-plus cart"></i></a>
+                <a href="#" onclick="addToCart(event, this.closest('.pro'))"><i class="fa-solid fa-cart-plus cart"></i></a>
         </div>
 
-        <div class="pro" >
+        <div class="pro" data-id="2" data-name="The Ancient Castle" data-price="280000" data-img="img/products/3.2.jpg" data-description="The Ancient Castle
+Được xây dựng trên bối cảnh lâu đài cổ, The Ancient Castle là một trong những series mang dấu ấn mạnh nhất về mặt hình ảnh của Skullpanda.
+Thiết kế đậm chất gothic với tông màu tối, chi tiết cổ điển và cấu trúc trang phục mang hơi hướng châu Âu trung cổ. Các nhân vật trong series thường gợi liên tưởng đến những câu chuyện cổ tích mang màu sắc huyền bí và có phần u tối.
+Đây cũng là dòng sản phẩm từng tạo dấu ấn lớn khi ra mắt, góp phần định hình phong cách nghệ thuật đặc trưng của Skullpanda trên thị trường art toy.
+">
             <img src="img/products/3.2.jpg" alt="">
             <div class="des">
                 <span>Skullpanda Series</span>
@@ -100,10 +107,14 @@
                     </div>
                     <h4>280.000 VND</h4>
                 </div>
-                <a href="#"><i class="fa-solid fa-cart-plus cart"></i></a>
+                <a href="#" onclick="addToCart(event, this.closest('.pro'))"><i class="fa-solid fa-cart-plus cart"></i></a>
         </div>
 
-        <div class="pro" >
+        <div class="pro" data-id="3" data-name="The Mare of Animals" data-price="280000" data-img="img/products/3.3.jpg" data-description="The Mare of Animals
+The Mare of Animals tập trung khai thác mối liên kết giữa con người và thế giới động vật thông qua lăng kính nghệ thuật.
+Mỗi figure là sự kết hợp giữa Skullpanda và các đặc điểm của động vật, tạo nên những hình tượng vừa quen thuộc vừa kỳ lạ. Thiết kế mang tính biểu tượng cao, phản ánh những khía cạnh bản năng, cảm xúc và mối quan hệ giữa con người với tự nhiên.
+Series không chỉ nổi bật về hình thức mà còn truyền tải thông điệp về sự hòa hợp và kết nối với môi trường sống.
+">
             <img src="img/products/3.3.jpg" alt="">
             <div class="des">
                 <span>Skullpanda Series</span>
@@ -117,10 +128,13 @@
                     </div>
                     <h4>280.000 VND</h4>
                 </div>
-                <a href="#"><i class="fa-solid fa-cart-plus cart"></i></a>
+                <a href="#" onclick="addToCart(event, this.closest('.pro'))"><i class="fa-solid fa-cart-plus cart"></i></a>
         </div>
 
-        <div class="pro" >
+        <div class="pro" data-id="4" data-name="The Glimpse" data-price="3000000" data-img="img/products/3.4.jpg" data-description="The Glimpse 
+The Glimpse khai thác những khoảnh khắc thoáng qua trong cảm xúc và ký ức – những điều tưởng như rất nhỏ nhưng lại để lại dấu ấn lâu dài. Series đặt Skullpanda trong các bối cảnh mang tính điện ảnh, nơi mọi chi tiết đều gợi cảm giác “đã từng xảy ra” nhưng không thể nắm giữ trọn vẹn.
+Thiết kế sử dụng bảng màu dịu, có xu hướng lạnh và hơi mờ, kết hợp cùng biểu cảm trầm lặng đặc trưng của nhân vật. Tổng thể tạo nên một trải nghiệm thị giác tinh tế, mang tính suy tưởng cao và phù hợp với tinh thần nghệ thuật đương đại của dòng Skullpanda – nơi mỗi figure là một lát cắt cảm xúc riêng biệt.
+">
             <img src="img/products/3.4.jpg" alt="">
             <div class="des">
                 <span>Skullpanda Series</span>
@@ -134,10 +148,14 @@
                     </div>
                     <h4>3.000.000 VND</h4>
                 </div>
-                <a href="#"><i class="fa-solid fa-cart-plus cart"></i></a>
+                <a href="#" onclick="addToCart(event, this.closest('.pro'))"><i class="fa-solid fa-cart-plus cart"></i></a>
         </div>
 
-        <div class="pro" >
+        <div class="pro" data-id="5" data-name="Shelter" data-price="280000" data-img="img/products/3.5.png" data-description="Shelter
+Shelter xoay quanh nhu cầu tìm kiếm một nơi an toàn về mặt tinh thần.
+Series thể hiện Hirono trong những không gian nhỏ, kín hoặc được bao bọc, tượng trưng cho sự bảo vệ và mong muốn được che chở. Chủ đề này phản ánh rất rõ khía cạnh nội tâm của nhân vật – sự mong manh và nhu cầu thuộc về một nơi nào đó. 
+Thiết kế sử dụng hình khối đơn giản nhưng giàu tính biểu tượng, tạo cảm giác ấm áp nhưng không kém phần cô đơn.
+">
             <img src="img/products/3.5.png" alt="">
             <div class="des">
                 <span>Hirono Series</span>
@@ -151,10 +169,14 @@
                     </div>
                     <h4>280.000 VND</h4>
                 </div>
-                <a href="#"><i class="fa-solid fa-cart-plus cart"></i></a>
+                <a href="#" onclick="addToCart(event, this.closest('.pro'))"><i class="fa-solid fa-cart-plus cart"></i></a>
         </div>
 
-        <div class="pro" >
+        <div class="pro" data-id="6" data-name="Reshape" data-price="280000" data-img="img/products/3.6.png" data-description="Reshape
+Reshape là hành trình tái định hình bản thân – nơi mỗi thay đổi đều đi kèm với mất mát và trưởng thành.
+Thiết kế thể hiện rõ điều này thông qua các chi tiết như cơ thể bị khâu lại, biến dạng hoặc tái cấu trúc. Mỗi figure đại diện cho một trạng thái trong quá trình phát triển, từ tổn thương đến hồi phục.
+Series sử dụng hình ảnh như một phép ẩn dụ cho việc con người liên tục thay đổi để thích nghi và hoàn thiện chính mình.
+">
             <img src="img/products/3.6.png" alt="">
             <div class="des">
                 <span>Hirono Series</span>
@@ -168,10 +190,13 @@
                     </div>
                     <h4>280.000 VND</h4>
                 </div>
-                <a href="#"><i class="fa-solid fa-cart-plus cart"></i></a>
+                <a href="#" onclick="addToCart(event, this.closest('.pro'))"><i class="fa-solid fa-cart-plus cart"></i></a>
         </div>
 
-        <div class="pro" >
+        <div class="pro" data-id="7" data-name="MIME" data-price="280000" data-img="img/products/3.7.jpg" data-description="Mime
+Lấy cảm hứng từ nghệ thuật kịch câm, Mime tập trung vào việc truyền tải cảm xúc mà không cần biểu đạt trực tiếp.
+Nhân vật trong series thường có biểu cảm tối giản, nhưng lại được đặt trong những tình huống giàu ẩn ý, buộc người xem phải tự diễn giải câu chuyện. Đây là một dòng mang tính nghệ thuật cao, nhấn mạnh vào sự im lặng và những cảm xúc khó gọi tên.
+">
             <img src="img/products/3.7.jpg" alt="">
             <div class="des">
                 <span>Hirono Series</span>
@@ -185,10 +210,13 @@
                     </div>
                     <h4>280.000 VND</h4>
                 </div>
-                <a href="#"><i class="fa-solid fa-cart-plus cart"></i></a>
+                <a href="#" onclick="addToCart(event, this.closest('.pro'))"><i class="fa-solid fa-cart-plus cart"></i></a>
         </div>
 
-        <div class="pro" >
+        <div class="pro" data-id="8" data-name="The Other One" data-price="280000" data-img="img/products/3.8.png" data-description="The Other One
+The Other One khai thác khái niệm “bản ngã thứ hai” – phần con người mà chúng ta không thường thể hiện ra bên ngoài.
+Thiết kế thể hiện sự đối lập thông qua hình dáng, biểu cảm hoặc cấu trúc nhân vật, tạo nên cảm giác phân tách giữa hai trạng thái tồn tại. Series mang tính tâm lý rõ rệt, phản ánh sự phức tạp trong nhận thức và bản sắc cá nhân.
+">
             <img src="img/products/3.8.png" alt="">
             <div class="des">
                 <span>Hirono Series</span>
@@ -202,7 +230,7 @@
                     </div>
                     <h4>280.000 VND</h4>
                 </div>
-                <a href="#"><i class="fa-solid fa-cart-plus cart"></i></a>
+                <a href="#" onclick="addToCart(event, this.closest('.pro'))"><i class="fa-solid fa-cart-plus cart"></i></a>
         </div>
 
     </div>
@@ -211,14 +239,18 @@
      <section id="about" class="section-m1">
         <h2>Bóc Móc – Móc Thêm</h2>
         <h4>Bóc Móc là shop chuyên bán blindbox – những chiếc hộp bí ẩn chứa đầy bất ngờ. Mở hộp, khám phá nhân vật bên trong và tận hưởng niềm vui sưu tầm.</h4>
-        <button class="normal" data-name="Về Bóc Móc" data-short-desc="Giới thiệu" data-long-desc="Bóc Móc là cửa hàng chuyên bán blindbox – những chiếc hộp bí mật chứa đầy bất ngờ. Mở hộp để khám phá nhân vật bên trong và tận hưởng niềm vui sưu tầm. Chúng tôi cung cấp các series độc đáo từ Skullpanda và Hirono, với chất lượng cao và giá cả phải chăng. Hãy tham gia cộng đồng người yêu thích blindbox và trải nghiệm sự thú vị của việc sưu tầm nghệ thuật mini!">Tìm hiểu thêm</button>
+        <button onclick="window.location.href='about.html'">Tìm hiểu thêm</button>
      </section>
 
      <!-- New Product -->
     <section id="product1" class="section-p1">
     <h2>Hàng Mới Về</h2>
     <div class="pro-container">
-        <div class="pro" >
+        <div class="pro" data-id="9" data-name="Ink Plum Blossom" data-price="280000" data-img="img/products/5.1.png" data-description="The Ink Plum
+Lấy cảm hứng từ nghệ thuật phương Đông, đặc biệt là tranh thủy mặc và hình ảnh hoa mai, Ink Plum Blossom mang đến một hướng tiếp cận nhẹ nhàng và tinh tế hơn cho Skullpanda.
+Thiết kế tập trung vào đường nét mềm mại, bảng màu tối giản và bố cục giàu tính cân bằng. Sự kết hợp giữa yếu tố truyền thống và tạo hình hiện đại giúp series vừa mang giá trị thẩm mỹ cao vừa thể hiện chiều sâu văn hóa.
+Đây là một trong những dòng thể hiện rõ khả năng kết hợp nghệ thuật cổ điển với thiết kế đương đại của Skullpanda.
+">
             <img src="img/products/5.1.png" alt="">
             <div class="des">
                 <span>Skullpanda Series</span>
@@ -232,10 +264,14 @@
                     </div>
                     <h4>280.000 VND</h4>
                 </div>
-                <a href="#"><i class="fa-solid fa-cart-plus cart"></i></a>
+                <a href="#" onclick="addToCart(event, this.closest('.pro'))"><i class="fa-solid fa-cart-plus cart"></i></a>
         </div>
 
-        <div class="pro" >
+        <div class="pro" data-id="10" data-name="The Mirage" data-price="580000" data-img="img/products/5.2.png" data-description="The Mirage
+The Mirage xoay quanh khái niệm “ảo ảnh” – nơi ranh giới giữa thực và không thực trở nên mờ nhạt.
+Thiết kế sử dụng hiệu ứng chuyển màu, ánh sáng và chất liệu tạo cảm giác không ổn định, như thể nhân vật đang tồn tại trong một không gian biến đổi liên tục. Điều này tạo nên trải nghiệm thị giác độc đáo và mang tính trừu tượng cao.
+Ý tưởng của series hướng đến việc khám phá nhận thức – cách con người nhìn nhận và diễn giải thế giới xung quanh, đôi khi không hoàn toàn chính xác.
+">
             <img src="img/products/5.2.png" alt="">
             <div class="des">
                 <span>Skullpanda Series</span>
@@ -249,10 +285,14 @@
                     </div>
                     <h4>580.000 VND</h4>
                 </div>
-                <a href="#"><i class="fa-solid fa-cart-plus cart"></i></a>
+                <a href="#" onclick="addToCart(event, this.closest('.pro'))"><i class="fa-solid fa-cart-plus cart"></i></a>
         </div>
 
-        <div class="pro" >
+        <div class="pro" data-id="11" data-name="The Sound" data-price="280000" data-img="img/products/5.3.jpg" data-description="The Sound
+The Sound là một trong những series mang tính khái niệm rõ rệt, khi âm thanh được chuyển hóa thành hình ảnh.
+Skullpanda được xây dựng như một “người du hành”, liên tục trải nghiệm các không gian và vai trò khác nhau, từ đó thể hiện những trạng thái cảm xúc đa dạng. 
+Thiết kế mang hơi hướng hiện đại với các chi tiết liên quan đến âm nhạc, nhịp điệu và chuyển động. Mỗi figure có thể được hiểu như một “giai điệu” riêng, tạo nên tổng thể một bộ sưu tập giàu tính biểu đạt.
+">
             <img src="img/products/5.3.jpg" alt="">
             <div class="des">
                 <span>Skullpanda Series</span>
@@ -266,10 +306,14 @@
                     </div>
                     <h4>280.000 VND</h4>
                 </div>
-                <a href="#"><i class="fa-solid fa-cart-plus cart"></i></a>
+                <a href="#" onclick="addToCart(event, this.closest('.pro'))"><i class="fa-solid fa-cart-plus cart"></i></a>
         </div>
 
-        <div class="pro" >
+        <div class="pro" data-id="12" data-name="The Celestial Horse" data-price="800000" data-img="img/products/5.4.png" data-description="The Celestial Horse
+Lấy cảm hứng từ hình tượng thiên mã trong thần thoại, The Celestial Horse mang đến một phiên bản Skullpanda giàu tính fantasy và siêu thực.
+Thiết kế tập trung vào các chi tiết mang tính biểu tượng như sừng, cánh, hiệu ứng ánh sáng và các yếu tố chuyển động, tạo cảm giác nhân vật không thuộc về thế giới thực. Tỉ lệ và form dáng được xử lý thanh thoát hơn, kết hợp cùng màu sắc huyền ảo giúp series trở nên nổi bật về mặt trưng bày.
+Ý tưởng của dòng này xoay quanh khái niệm tự do, vượt thoát và khám phá những không gian vượt ngoài giới hạn thông thường. 
+">
             <img src="img/products/5.4.png" alt="">
             <div class="des">
                 <span>Skullpanda Series</span>
@@ -283,10 +327,14 @@
                     </div>
                     <h4>800.000 VND</h4>
                 </div>
-                <a href="#"><i class="fa-solid fa-cart-plus cart"></i></a>
+                <a href="#" onclick="addToCart(event, this.closest('.pro'))"><i class="fa-solid fa-cart-plus cart"></i></a>
         </div>
 
-        <div class="pro" >
+        <div class="pro" data-id="13" data-name="Le Petit Prince" data-price="280000" data-img="img/products/5.5.png" data-description="Le Petit Prince
+Là sự kết hợp giữa Hirono và tác phẩm văn học kinh điển Le Petit Prince, series mang đậm tính thơ và triết lý.
+Thiết kế tái hiện các hình tượng quen thuộc như hoàng tử bé, bông hồng hay cáo, nhưng được thể hiện dưới góc nhìn trầm lặng và nội tâm hơn.
+Ý tưởng của dòng này tập trung vào các giá trị như tình yêu, sự cô đơn và hành trình trưởng thành – được thể hiện thông qua ngôn ngữ tạo hình nhẹ nhàng, tinh tế.
+">
             <img src="img/products/5.5.png" alt="">
             <div class="des">
                 <span>Hirono Series</span>
@@ -300,10 +348,14 @@
                     </div>
                     <h4>280.000 VND</h4>
                 </div>
-                <a href="#"><i class="fa-solid fa-cart-plus cart"></i></a>
+                <a href="#" onclick="addToCart(event, this.closest('.pro'))"><i class="fa-solid fa-cart-plus cart"></i></a>
         </div>
 
-        <div class="pro" >
+        <div class="pro" data-id="14" data-name="Monsters' Carnival" data-price="300000" data-img="img/products/5.6.png" data-description="Monsters’ Carnival
+Monster Carnival là một “lễ hội” nơi những hình tượng kỳ lạ và có phần dị biệt trở thành trung tâm.
+Thiết kế mang màu sắc fantasy, với các nhân vật có ngoại hình giống quái vật nhưng lại thể hiện cảm xúc rất con người. Sự đối lập này tạo nên nét đặc trưng cho series: vừa kỳ quái, vừa gần gũi.
+Ý tưởng chính của dòng là khám phá những phần “khác biệt” trong mỗi cá nhân – những điều thường bị che giấu nhưng lại là một phần không thể thiếu của bản thân.
+">
             <img src="img/products/5.6.png" alt="">
             <div class="des">
                 <span>Hirono Series</span>
@@ -317,10 +369,14 @@
                     </div>
                     <h4>300.000 VND</h4>
                 </div>
-                <a href="#"><i class="fa-solid fa-cart-plus cart"></i></a>
+                <a href="#" onclick="addToCart(event, this.closest('.pro'))"><i class="fa-solid fa-cart-plus cart"></i></a>
         </div>
 
-        <div class="pro" >
+        <div class="pro" data-id="15" data-name="Echo" data-price="280000" data-img="img/products/5.7.png" data-description="Echo
+Echo khai thác chủ đề ký ức, sự phản chiếu và hành trình tìm lại chính mình.
+Nhân vật Hirono thường xuất hiện trong trạng thái tĩnh lặng, được bao quanh bởi các yếu tố mang tính biểu tượng như không gian trống, vật thể lặp lại hoặc cấu trúc bảo vệ. Series thể hiện cách con người kết nối lại với những phần ký ức đã bị lãng quên.
+Thiết kế mang tính tối giản nhưng giàu chiều sâu, nhấn mạnh vào cảm xúc hơn là chi tiết phức tạp.
+">
             <img src="img/products/5.7.png" alt="">
             <div class="des">
                 <span>Hirono Series</span>
@@ -334,10 +390,14 @@
                     </div>
                     <h4>280.000 VND</h4>
                 </div>
-                <a href="#"><i class="fa-solid fa-cart-plus cart"></i></a>
+                <a href="#" onclick="addToCart(event, this.closest('.pro'))"><i class="fa-solid fa-cart-plus cart"></i></a>
         </div>
 
-        <div class="pro" >
+        <div class="pro" data-id="16" data-name="Living Wild-Fight for Joy" data-price="900000" data-img="img/products/5.8.png" data-description="Living Wild-fight for Joy
+Living Wild: Fight For Joy đánh dấu một bước chuyển trong hình tượng Hirono – từ tĩnh lặng sang chủ động và giàu năng lượng hơn.
+Nhân vật được đặt trong bối cảnh thiên nhiên hoặc mang đặc điểm của động vật, tượng trưng cho bản năng và sự tự do.
+Concept “Fight For Joy” thể hiện tinh thần theo đuổi niềm vui và ý nghĩa sống, ngay cả khi phải đối mặt với những khó khăn. Thiết kế có xu hướng mềm mại hơn, đôi khi kết hợp chất liệu tạo cảm giác gần gũi và sống động.
+">
             <img src="img/products/5.8.png" alt="">
             <div class="des">
                 <span>Hirono Series</span>
@@ -351,40 +411,40 @@
                     </div>
                     <h4>900.000 VND</h4>
                 </div>
-                <a href="#"><i class="fa-solid fa-cart-plus cart"></i></a>
+                <a href="#" onclick="addToCart(event, this.closest('.pro'))"><i class="fa-solid fa-cart-plus cart"></i></a>
         </div>
 
     </div>
     </section>
     <!-- Small 2 Banner -->
      <section id="collections" class="section-p1">
-        <div class="banner-box">
+        <div class="banner-box" onclick="window.location.href='blog.html'" style="cursor: pointer;">
             <h4>Hirono</h4>
             <h2>Ceramic Feather Figurine</h2>
-            <button class="white" data-name="Ceramic Feather Figurine" data-short-desc="Hirono" data-long-desc="Mô hình gốm Ceramic Feather Figurine từ series Hirono. Thiết kế tinh tế với chi tiết lông vũ, tượng trưng cho sự nhẹ nhàng và nghệ thuật. Lý tưởng cho người sưu tầm các tác phẩm gốm mini.">Tìm Hiểu Thêm</button>
+            <button class="white" onclick="window.location.href='blog.html'; event.stopPropagation();" data-name="Ceramic Feather Figurine" data-short-desc="Hirono" data-long-desc="Mô hình gốm Ceramic Feather Figurine từ series Hirono. Thiết kế tinh tế với chi tiết lông vũ, tượng trưng cho sự nhẹ nhàng và nghệ thuật. Lý tưởng cho người sưu tầm các tác phẩm gốm mini.">Tìm Hiểu Thêm</button>
         </div>
-        <div class="banner-box banner-box2">
+        <div class="banner-box banner-box2" onclick="window.location.href='blog.html'" style="cursor: pointer;">
             <h4>Hirono</h4>
             <h2>Shelter Series Figures </h2>
             <span>Birdcage</span>
-            <button class="white" data-name="Shelter Series Figures - Birdcage" data-short-desc="Hirono" data-long-desc="Mô hình Shelter Series Figures với chủ đề Birdcage từ Hirono. Kể về câu chuyện của những chú chim trong lồng, với thiết kế phức tạp và ý nghĩa sâu sắc. Phù hợp cho những ai yêu thích nghệ thuật kể chuyện qua mô hình.">Tìm Hiểu Thêm</button>
+            <button class="white" onclick="window.location.href='blog.html'; event.stopPropagation();" data-name="Shelter Series Figures - Birdcage" data-short-desc="Hirono" data-long-desc="Mô hình Shelter Series Figures với chủ đề Birdcage từ Hirono. Kể về câu chuyện của những chú chim trong lồng, với thiết kế phức tạp và ý nghĩa sâu sắc. Phù hợp cho những ai yêu thích nghệ thuật kể chuyện qua mô hình.">Tìm Hiểu Thêm</button>
         </div>
         
      </section>
 
      <!-- Small 3 banner -->
       <section id="more-collections">
-        <div class="banner-box">
+        <div class="banner-box" onclick="window.location.href='blog.html'" style="cursor: pointer;">
             <span>Hirono</span>
             <h2>Circus</h2>
             <h3>Shelter Series Figures</h3>    
         </div>
-        <div class="banner-box banner-box2">
+        <div class="banner-box banner-box2" onclick="window.location.href='blog.html'" style="cursor: pointer;">
             <span>Skullpanda</span>
             <h2>The Valley</h2>
             <h3>The Ink Plum Blossom</h3>    
         </div>
-        <div class="banner-box banner-box3">
+        <div class="banner-box banner-box3" onclick="window.location.href='blog.html'" style="cursor: pointer;">
             <span>Hirono</span>
             <h2>Poet</h2>
             <h3>Shelter Series Figures</h3>    
@@ -425,29 +485,29 @@
 
             <div class="col">
                 <h4>Liên Hệ</h4>
-                <a href="#">Về chúng tôi</a>
-                <a href="#">Thông tin giao hàng</a>
-                <a href="#">Chính sách bảo mật</a>
-                <a href="#">Điều khoản & Điều kiện</a>
-                <a href="#">Liên hệ chúng tôi</a>
+                <a href="about.html">Về chúng tôi</a>
+                <a href="contact.html">Thông tin giao hàng</a>
+                <a href="contact.html">Chính sách bảo mật</a>
+                <a href="contact.html">Điều khoản & Điều kiện</a>
+                <a href="contact.html">Liên hệ chúng tôi</a>
             </div>
             <div class="col">
                 <h4>Tài khoản của tôi</h4>
-                <a href="#">Đăng nhập</a>
-                <a href="#">Xem giỏ hàng</a>
-                <a href="#">Sản phẩm yêu thích</a>
-                <a href="#">Theo dõi đơn hàng</a>
-                <a href="#">Hỗ trợ</a>
+                <a href="index.html">Đăng nhập</a>
+                <a href="cart.html">Xem giỏ hàng</a>
+                <a href="shop.html">Sản phẩm yêu thích</a>
+                <a href="contact.html">Theo dõi đơn hàng</a>
+                <a href="contact.html">Hỗ trợ</a>
             </div>
             <div class="col install">
                 <h4>Tải Ứng Dụng</h4>
                 <p>Từ App Store hoặc Google Play</p>
                 <div class="row">
-                    <img src="img/pay/app.jpg" alt="">
-                    <img src="img/pay/play.jpg" alt="">
+                    <img src="img/pay/app.jpg" onclick="window.location.href='https://apps.apple.com/vn/app/pop-mart/id1594346256'">
+                    <img src="img/pay/play.jpg" onclick="window.location.href='https://play.google.com/store/apps/details?id=com.popmart.global&hl=vi&pli=1'">
                 </div>
                 <p>Cổng thanh toán an toàn</p>
-                <img src="img/pay/pay.png" alt="">
+                <img src="img/pay/pay.png" onclick="window.location.href='checkout.html'">
             </div>
 
 

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Thanh toán - Bóc Móc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <section id="header">
+        <a href="index.html"><img src="img/logomoi.png" class="logo"> </a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html"> Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag"><a href="cart.html" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+            </div>
+            <div id="mobile">
+                <a href="cart.html" id="cart-icon-mobile"><i class="fa-solid fa-cart-shopping"></i></a>
+                <i id="bar" class="fas fa-outdent"></i>
+            </div>
+    </section>
+
+    <!-- Checkout Header -->
+    <section id="page-header" class="cart-header">
+        <h2>Thanh toán</h2>
+        <p>Hoàn tất đơn hàng của bạn</p>
+    </section>
+
+    <!-- Return Button -->
+    <section class="return-section">
+        <button onclick="window.location.href='cart.html'" class="return-btn">
+            <i class="fas fa-arrow-left"></i> Quay lại giỏ hàng
+        </button>
+    </section>
+
+    <!-- Checkout Section -->
+    <section id="checkout" class="section-p1">
+        <div class="checkout-container">
+            <!-- Order Summary -->
+            <div class="checkout-summary">
+                <h3>Tóm tắt đơn hàng</h3>
+                <div id="checkout-items">
+                    <!-- Items will be populated by JavaScript -->
+                </div>
+                <div class="checkout-totals">
+                    <div class="total-row">
+                        <span>Tổng thu:</span>
+                        <span id="checkout-subtotal">0đ</span>
+                    </div>
+                    <div class="total-row">
+                        <span>Phí vận chuyển:</span>
+                        <span id="checkout-shipping">30.000đ</span>
+                    </div>
+                    <div class="total-row" id="discount-row" style="display: none;">
+                        <span>Giảm giá:</span>
+                        <span id="checkout-discount">-0đ</span>
+                    </div>
+                    <div class="total-row total-final">
+                        <strong>Tổng cộng:</strong>
+                        <strong id="checkout-total">0đ</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Checkout Form -->
+            <div class="checkout-form">
+                <form id="checkout-form">
+                    <!-- Customer Information -->
+                    <div class="form-section">
+                        <h3>Thông tin khách hàng</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Họ và tên *</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Số điện thoại *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+
+                    <!-- Shipping Address -->
+                    <div class="form-section">
+                        <h3>Địa chỉ giao hàng</h3>
+                        <div class="form-group">
+                            <label for="address">Địa chỉ *</label>
+                            <input type="text" id="address" name="address" placeholder="Số nhà, đường, phường/xã" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="district">Quận/Huyện *</label>
+                                <select id="district" name="district" required>
+                                    <option value="">Chọn quận/huyện</option>
+                                    <option value="quan1">Quận 1</option>
+                                    <option value="quan2">Quận 2</option>
+                                    <option value="quan3">Quận 3</option>
+                                    <option value="quan4">Quận 4</option>
+                                    <option value="quan5">Quận 5</option>
+                                    <option value="quan6">Quận 6</option>
+                                    <option value="quan7">Quận 7</option>
+                                    <option value="quan8">Quận 8</option>
+                                    <option value="quan9">Quận 9</option>
+                                    <option value="quan10">Quận 10</option>
+                                    <option value="quan11">Quận 11</option>
+                                    <option value="quan12">Quận 12</option>
+                                    <option value="binhthanh">Quận Bình Thạnh</option>
+                                    <option value="govap">Quận Gò Vấp</option>
+                                    <option value="tanbinh">Quận Tân Bình</option>
+                                    <option value="tanphu">Quận Tân Phú</option>
+                                    <option value="phunhuan">Quận Phú Nhuận</option>
+                                    <option value="thuduc">Quận Thủ Đức</option>
+                                    <option value="binhtan">Quận Bình Tân</option>
+                                    <option value="hocmon">Huyện Hóc Môn</option>
+                                    <option value="cuchi">Huyện Củ Chi</option>
+                                    <option value="nhabbe">Huyện Nhà Bè</option>
+                                    <option value="canggio">Huyện Cần Giờ</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">Tỉnh/Thành phố *</label>
+                                <select id="city" name="city" required>
+                                    <option value="hcm">TP. Hồ Chí Minh</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">Ghi chú (tùy chọn)</label>
+                            <textarea id="notes" name="notes" rows="3" placeholder="Ví dụ: Giao hàng giờ hành chính, không gọi trước..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Payment Method -->
+                    <div class="form-section">
+                        <h3>Phương thức thanh toán</h3>
+                        <div class="payment-methods">
+                            <div class="payment-option">
+                                <input type="radio" id="cod" name="payment" value="cod" checked>
+                                <label for="cod">
+                                    <div class="payment-info">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                        <div>
+                                            <strong>Thanh toán khi nhận hàng (COD)</strong>
+                                            <p>Thanh toán bằng tiền mặt khi nhận hàng</p>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="payment-option">
+                                <input type="radio" id="banking" name="payment" value="banking">
+                                <label for="banking">
+                                    <div class="payment-info">
+                                        <i class="fas fa-university"></i>
+                                        <div>
+                                            <strong>Chuyển khoản ngân hàng</strong>
+                                            <p>Thanh toán qua Internet Banking/Mobile Banking</p>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="payment-option">
+                                <input type="radio" id="card" name="payment" value="card">
+                                <label for="card">
+                                    <div class="payment-info">
+                                        <i class="fas fa-credit-card"></i>
+                                        <div>
+                                            <strong>Thẻ tín dụng/ghi nợ</strong>
+                                            <p>Visa, Mastercard, JCB, American Express</p>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="payment-option">
+                                <input type="radio" id="momo" name="payment" value="momo">
+                                <label for="momo">
+                                    <div class="payment-info">
+                                        <i class="fas fa-mobile-alt"></i>
+                                        <div>
+                                            <strong>Ví điện tử MoMo</strong>
+                                            <p>Thanh toán nhanh qua ứng dụng MoMo</p>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="payment-option">
+                                <input type="radio" id="zalopay" name="payment" value="zalopay">
+                                <label for="zalopay">
+                                    <div class="payment-info">
+                                        <i class="fas fa-wallet"></i>
+                                        <div>
+                                            <strong>ZaloPay</strong>
+                                            <p>Thanh toán qua ZaloPay</p>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coupon Code -->
+                    <div class="form-section">
+                        <h3>Mã giảm giá</h3>
+                        <div class="coupon-input">
+                            <input type="text" id="coupon-code" placeholder="Nhập mã giảm giá">
+                            <button type="button" id="apply-coupon" class="normal">Áp dụng</button>
+                        </div>
+                        <div id="coupon-message"></div>
+                    </div>
+
+                    <!-- Terms and Conditions -->
+                    <div class="form-section">
+                        <div class="terms">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">Tôi đồng ý với <a href="contact.html" target="_blank">Điều khoản & Điều kiện</a> và <a href="contact.html" target="_blank">Chính sách bảo mật</a></label>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="checkout-btn">Đặt hàng</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="col">
+            <img class="logo" src="img/logomoi.png">
+            <h4>Thông Tin Liên Hệ</h4>
+            <p><strong>Địa chỉ:</strong> Vietname, HCM city, Quan 7</p>
+            <p><strong>Số điện thoại:</strong> (028) 1234 5678</p>
+            <p><strong>Giờ:</strong> 09:00 - 18:00, Mon - Sat</p>
+            <div class="follow">
+                <h4>Theo chúng tôi</h4>
+                <div class="icon">
+                    <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+                    <a href="https://pinterest.com"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="https://youtube.com"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>Liên Hệ</h4>
+            <a href="about.html">Về chúng tôi</a>
+            <a href="contact.html">Thông tin giao hàng</a>
+            <a href="contact.html">Chính sách bảo mật</a>
+            <a href="contact.html">Điều khoản & Điều kiện</a>
+            <a href="contact.html">Liên hệ chúng tôi</a>
+        </div>
+        <div class="col">
+            <h4>Tài khoản của tôi</h4>
+            <a href="index.html">Đăng nhập</a>
+            <a href="cart.html">Xem giỏ hàng</a>
+            <a href="shop.html">Sản phẩm yêu thích</a>
+            <a href="contact.html">Theo dõi đơn hàng</a>
+            <a href="contact.html">Hỗ trợ</a>
+        </div>
+        <div class="col install">
+            <h4>Tải Ứng Dụng</h4>
+            <p>Từ App Store hoặc Google Play</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" onclick="window.location.href='https://apps.apple.com/vn/app/pop-mart/id1594346256'">
+                <img src="img/pay/play.jpg" onclick="window.location.href='https://play.google.com/store/apps/details?id=com.popmart.global&hl=vi&pli=1'">
+            </div>
+            <p>Cổng thanh toán an toàn</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+
+        <div class="copyright">
+            <p>2026, Bóc Móc - HTML CSS E-commerce Website</p>
+            <p>Tất cả hình ảnh đều thuộc quyền sở hữu của POP MART</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

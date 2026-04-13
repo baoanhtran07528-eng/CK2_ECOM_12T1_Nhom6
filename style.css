@@ -1780,8 +1780,6 @@ footer .copyright {
     .section-p1 {
         padding: 20px;
     }
-
-@media (max-width: 477px) {
     .checkout-summary,
     .checkout-form {
         padding: 15px;
@@ -1808,8 +1806,8 @@ footer .copyright {
         width: 100%;
         justify-content: center;
     }
-}
 
+    
     #header {
         padding: 10px 20px;
     }

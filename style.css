@@ -1787,11 +1787,16 @@ footer .copyright {
 
     .checkout-container {
         gap: 15px;
+        padding: 0 10px;
+        grid-template-columns: 1fr;
     }
 
     .form-section h3 {
         font-size: 20px;
     }
+    .form-row {
+    grid-template-columns: 1fr;
+}
 
     .checkout-btn {
         font-size: 16px;
